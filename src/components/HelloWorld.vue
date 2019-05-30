@@ -15,7 +15,7 @@
 </template>
 <script>
 
-import md from '../assets/text.md'
+import md from '../assets/reactNative.md'
 
 export default {
   name: 'HelloWorld',

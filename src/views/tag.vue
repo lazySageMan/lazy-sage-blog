@@ -35,6 +35,9 @@ export default {
             ],
             tag:["vue", "react", "react-native", "网络", "小程序", " webpack", "python", "css", "生活常事", "一件和阅读有关的事", "Kindle Paperwhite 3"]
         }
+    },
+    created(){
+        this.$store.commit("changeIndex", true);
     }
 
 }

@@ -101,7 +101,6 @@ export default {
 .list-wrap{
   display: flex;
   justify-content: center;
-  width: 900px;
   .wraps{
     .list{
         width: 45vw;

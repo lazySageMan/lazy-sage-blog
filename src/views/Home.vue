@@ -9,7 +9,12 @@ import BlodList from '../components/blog-list'
 export default {
   components: {
     BlodList: BlodList
+  },
+
+  created(){
+    this.$store.commit("changeIndex", true);
   }
+
 }
 </script>
 <style>

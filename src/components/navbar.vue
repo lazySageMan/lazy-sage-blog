@@ -13,10 +13,21 @@
         </header>
         <div class="bg">
             <img src="../assets/hero.jpg" class="head-img">
+            <div class="des">
+                <div class="index" v-if="getStore">
+                    <p class="title">Work hard & have passion</p>
+                    <p class="con">努力奋进有激情</p>
+                </div>
+                <div class="content" v-if="!getStore">
+                    <p class="con-title">React的基础知识</p>
+                    <p class="user"> <a-icon type="user" class="icon"/>&nbsp;彭一高 <a-icon type="clock-circle" class="icon"/>&nbsp;2019/05/13</p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 <script>
+
 export default {
 
     data(){
@@ -33,10 +44,20 @@ export default {
         window.addEventListener('scroll', this.handleScroll);
     },
 
+    created(){
+        console.log(this.$store)
+    },
+
+    computed:{
+        getStore(){
+            return this.$store.state.isIndex
+        }
+    },
+
     watch: {
         scroll : { //监听滚动条滚动
             handler(newVal, oldVal){
-                if(newVal < oldVal && newVal > 500){
+                if(newVal < oldVal && newVal > 300){
                     this.up = true;
                 }else {
                     this.up = false;
@@ -48,9 +69,9 @@ export default {
     methods: {
         handleScroll(){
             this.scroll = window.scrollY;
-            if(window.scrollY > 60 && window.scrollY < 500){
+            if(window.scrollY > 60 && window.scrollY < 300){
                 this.active = "block";
-            }else if(window.scrollY > 500){
+            }else if(window.scrollY > 300){
                 if(this.up){
                     this.active = "block";
                 }else{
@@ -125,6 +146,44 @@ export default {
             left: 0;
             width: 100%;
             z-index: 0;
+        }
+        .des{
+            width: 50vw;
+            margin: auto;
+            margin-top: 230px;
+            position: relative;
+            z-index: 5;
+            .index{
+                color: #fff;
+                .title{
+                    text-align: center;
+                    font-size: 35px;
+                    margin-bottom: 15px;
+                }
+                .con{
+                    text-align: center;
+                    font-size: 20px;
+                }
+            }
+        }
+        .content{
+            text-align: left;
+            color: #fff;
+            .con-title{
+                font-size: 35px;
+                margin-bottom: 30px;
+            }
+            .user{
+                height:30px;
+                font-size: 18px;
+                line-height: 30px;
+                color: rgba(255, 255, 255, 0.7);
+                .icon{
+                    display: inline-block;
+                    vertical-align: middle;
+                    box-sizing:  border-box;
+                }
+            }
         }
     }
     
