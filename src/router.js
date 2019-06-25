@@ -8,7 +8,7 @@ function loadView(view) { //路由懒加载
 }
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes: [
     {
