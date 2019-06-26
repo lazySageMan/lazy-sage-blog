@@ -8,5 +8,8 @@ module.exports = {
     },
     css: {
         modules: true
-    }
+    },
+    publicPath: './',
+    outputDir: 'dist',
+    assetsDir: 'static'
 }
