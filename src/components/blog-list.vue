@@ -103,7 +103,6 @@ export default {
   justify-content: center;
   .wraps{
     .list{
-        width: 45vw;
         padding: 30px;
         margin-bottom: 20px;
         border: 1px solid #e7eaf1;
@@ -151,9 +150,9 @@ export default {
     }
   }
   .user-wrap{
-    width: 17vw;
+    width: 240px;
     .user{
-      width: 17vw;
+      width: 240px;
       height: 300px;
       background: #fff;
       border: 1px solid #e7eaf1;
