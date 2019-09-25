@@ -17,32 +17,32 @@ export default {
         return {
             listData: [
                 {
-                    list: ["一件和阅读有关的事：Kindle Paperwhite 3 入手", "一件和阅读有关的事：Kindle Paperwhite 3 入手", "一件和阅读有关的事：Kindle Paperwhite 3 入手"],
-                    name: "react"
-                },
-                 {
-                    list: ["一件和阅读有关的事：Kindle Paperwhite 3 入手", "一件和阅读有关的事：Kindle Paperwhite 3 入手", "一件和阅读有关的事：Kindle Paperwhite 3 入手"],
-                    name: "vue"
+                    list: ['一件和阅读有关的事：Kindle Paperwhite 3 入手', '一件和阅读有关的事：Kindle Paperwhite 3 入手', '一件和阅读有关的事：Kindle Paperwhite 3 入手'],
+                    name: 'react'
                 },
                 {
-                    list: ["一件和阅读有关的事：Kindle Paperwhite 3 入手", "一件和阅读有关的事：Kindle Paperwhite 3 入手", "一件和阅读有关的事：Kindle Paperwhite 3 入手"],
-                    name: "小程序"
+                    list: ['一件和阅读有关的事：Kindle Paperwhite 3 入手', '一件和阅读有关的事：Kindle Paperwhite 3 入手', '一件和阅读有关的事：Kindle Paperwhite 3 入手'],
+                    name: 'vue'
                 },
                 {
-                    list: ["一件和阅读有关的事：Kindle Paperwhite 3 入手", "一件和阅读有关的事：Kindle Paperwhite 3 入手", "一件和阅读有关的事：Kindle Paperwhite 3 入手"],
-                    name: "生活常事一件和阅读有关的事"
+                    list: ['一件和阅读有关的事：Kindle Paperwhite 3 入手', '一件和阅读有关的事：Kindle Paperwhite 3 入手', '一件和阅读有关的事：Kindle Paperwhite 3 入手'],
+                    name: '小程序'
+                },
+                {
+                    list: ['一件和阅读有关的事：Kindle Paperwhite 3 入手', '一件和阅读有关的事：Kindle Paperwhite 3 入手', '一件和阅读有关的事：Kindle Paperwhite 3 入手'],
+                    name: '生活常事一件和阅读有关的事'
                 },
             ],
-            tag:["vue", "react", "react-native", "网络", "小程序", " webpack", "python", "css", "生活常事", "一件和阅读有关的事", "Kindle Paperwhite 3"]
-        }
+            tag:['vue', 'react', 'react-native', '网络', '小程序', ' webpack', 'python', 'css', '生活常事', '一件和阅读有关的事', 'Kindle Paperwhite 3']
+        };
     },
     created(){
-        this.$store.commit("changeIndex", true);
+        this.$store.commit('changeIndex', true);
     }
 
-}
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .wrap{
         width: 45vw;
         margin: -130px auto 0;

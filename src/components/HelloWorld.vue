@@ -15,28 +15,28 @@
 </template>
 <script>
 
-import md from '../assets/reactNative.md'
+import md from '../assets/reactNative.md';
 
 export default {
-  name: 'HelloWorld',
-  data(){
-    return {
-      md: md
-    }
-  },
+    name: 'HelloWorld',
+    data(){
+        return {
+            md: md
+        };
+    },
 
-  created(){
-  },
+    created(){
+    },
 
-  methods: {
+    methods: {
     
-  },
+    },
 
   
-  props: {
-    msg: String
-  },
-}
+    props: {
+        msg: String
+    },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
