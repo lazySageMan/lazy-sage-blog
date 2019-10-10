@@ -1,13 +1,20 @@
 <template>
   <div>
-    <HelloWorld />
+    <Content :html="md" />
   </div>
 </template>
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
+import Content from '../components/content';
+import md from '../assets/reactNative.md';
+import {translateMarkdown} from '../utils/translateMarkdown'
 export default {
     components: {
-        HelloWorld :HelloWorld
+        Content :Content
+    },
+    data(){
+      return {
+        md: translateMarkdown(md)
+      }
     },
     created(){
         this.$store.commit('changeIndex', false);

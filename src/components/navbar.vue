@@ -4,17 +4,22 @@
             <router-link tag="div" to="/"  class="icon">LazySage</router-link>
             <nav class="nav">
                 <ul>
-                    <router-link tag="li"  to="/home">HOME</router-link>
-                    <router-link tag="li"  to="/tags">TAGS</router-link>
+                    <router-link 
+                        active-class="router-active" 
+                        tag="li"  
+                        to="/home">HOME</router-link>
+                    <router-link 
+                        active-class="router-active" 
+                        tag="li"  
+                        to="/tags">ARCH</router-link>
+                    <li>ABOUT</li>
                     <li>LOGIN</li>
                 </ul>
             </nav>
-            
         </header>
     </div>
 </template>
 <script>
-
 export default {
 
     data(){
@@ -24,8 +29,6 @@ export default {
             scroll: 0
         };
     },
-
-
 
     mounted(){
         window.addEventListener('scroll', this.handleScroll);
@@ -73,12 +76,16 @@ export default {
     }
 };
 </script>
-<style lang="scss">
+<style lang="scss" >
     @font-face {
         font-family: "huakang";
         src: url("../assets/huakangwawa.ttf");
         font-weight: normal;
         font-style: normal;
+    }
+
+    .router-active {
+        color: rgb(45, 183, 245);
     }
     
     .header{
@@ -115,6 +122,7 @@ export default {
                     font-size: 15px;
                     line-height: 40px;
                     text-align: center;
+                    transition: .5s;
                     cursor: pointer;
                 }
             }

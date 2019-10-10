@@ -1,65 +1,82 @@
-// 全局网络请求起点
-import axios from 'axios';
-
-class Http {
-    constructor(){
-        this.apiHost = 'http://127.0.0.1:3000';
+import Axios from 'axios'
+export default class HTTP {
+    constructor() {
+        this.host = 'http://localhost:9000' // 请求主机
     }
 
-    createUrl(url){
-        return this.apiHost + url;
+    // 没有静态属性模拟一下
+    static host() {
+        return 'http://localhost:9000'
     }
 
-    async getData(url, token = null){
-        let baseUrl = this.createUrl(url);
-        let data = await axios({
+    // 处理get请求的query拼接
+    static dealParams(url, params) {
+        let paramsArray = []
+        let searchUrl = url
+
+        if (!params) {
+            return searchUrl
+        }
+
+        Object.keys(params).forEach(key =>
+            paramsArray.push(key + "=" + params[key])
+        );
+
+        if (searchUrl.search(/\?/) === -1) {
+            searchUrl = searchUrl + "?" + paramsArray.join("&");
+        } else {
+            searchUrl = searchUrl + "&" + paramsArray.join("&");
+        }
+
+        return searchUrl
+    }
+
+    // get 请求
+    static GET(url, params, token = '') {
+        let searchUrl = this.dealParams(`${this.host()}${url}`, params);
+        console.log(searchUrl)
+        return Axios({
             method: 'get',
-            url: baseUrl,
+            url: searchUrl,
+            data: {},
             headers: {
-                'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + token
             }
         }).then(res => {
             return {
-                status: true,
-                data: res.data
-            };
+                ...res.data
+            }
         }).catch(err => {
-            return {
-                status: false,
-                msg: err.response.msg,
-                code: err.response.status
-            };
-        });
-
-        return data;
+            if (err.response.status === 401) {
+                return {
+                    code: 401,
+                    message: '身份已过期，请重新登录'
+                }
+            }
+        })
     }
 
-    async postData(url, userData = null, token = null){
-        let baseUrl = this.createUrl(url);
-        let data = await axios({
+    // post 请求
+    static POST(url, params = {}, token = '') {
+        let searchUrl = `${this.host()}${url}`;
+        return Axios({
             method: 'post',
-            url: baseUrl,
-            data: userData,
+            url: searchUrl,
+            data: params,
             headers: {
-                'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + token
             }
         }).then(res => {
             return {
-                status: true,
-                data: res.data
-            };
+                ...res.data
+            }
         }).catch(err => {
-            return {
-                status: false,
-                msg: err.response.msg,
-                code: err.response.status
-            };
-        });
-
-        return data;
+            if (err.response.status === 401) {
+                return {
+                    code: 401,
+                    message: '身份已过期，请重新登录'
+                }
+            }
+        })
     }
 }
-
-export default Http;

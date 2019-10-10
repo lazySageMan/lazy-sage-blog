@@ -6,6 +6,7 @@ import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
 import mavonEditor from 'mavon-editor';
 import 'mavon-editor/dist/css/index.css';
+import 'highlight.js/styles/atom-one-dark.css';
 
 Vue.config.productionTip = false;
 

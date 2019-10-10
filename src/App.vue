@@ -3,12 +3,12 @@
 	<a-layout>
 		<navbar />
 		<router-view />
-		<!-- <Footer /> -->
-		<div id="components-back-top-demo-custom">
+
+		<!-- <div id="components-back-top-demo-custom">
 			<a-back-top>
 				<div class="ant-back-top-inner">UP</div>
 			</a-back-top>
-		</div>
+		</div> -->
 	</a-layout>
   </div>
 </template>

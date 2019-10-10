@@ -1,5 +1,7 @@
 <template>
-    <div class="left-wrap"></div>
+    <div class="left-wrap">
+        
+    </div>
 </template>
 <script>
 export default {
