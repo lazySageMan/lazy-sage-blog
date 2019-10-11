@@ -6,7 +6,7 @@
             style="margin-right: 5px" 
             :type="type" />
         <a-tag 
-            :color="type === 'tag' ? colorList[index] : '#2db7f5'" 
+            :color="type === 'tag' ? clolrFulList[index] : '#2db7f5'" 
             v-for="(item, index) in list" 
             :key="index">
             {{item.name}}
@@ -15,6 +15,9 @@
 </template>
 
 <script>
+
+import clolrFulList from '../config'
+
 export default {
     props: {
         type: {
@@ -31,7 +34,7 @@ export default {
 
     data(){
         return{
-            colorList: ['pink', 'red', 'orange', 'green', 'cyan', 'blue']
+            clolrFulList
         }
     }
 }

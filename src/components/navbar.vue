@@ -11,7 +11,7 @@
                     <router-link 
                         active-class="router-active" 
                         tag="li"  
-                        to="/tags">ARCH</router-link>
+                        to="/tags">TAGS</router-link>
                     <li>ABOUT</li>
                     <li>LOGIN</li>
                 </ul>

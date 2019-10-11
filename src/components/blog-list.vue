@@ -64,7 +64,7 @@ export default {
             offset: 1,
             pageSize: 10
         }
-		HTTP.GET('/admin/getBlog', obj,  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYWRtaW4iLCJpYXQiOjE1NzA2Njk5NTcsImV4cCI6MTU3MDcxMzE1N30.sw-sstLob7DEBlmrhSunICpWF-DdFq8cWyC-AUWpRRw").then(res => {
+		HTTP.GET('/admin/getBlog', obj,  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYWRtaW4iLCJpYXQiOjE1NzA3NTU3NTAsImV4cCI6MTU3MDc5ODk1MH0.dU_4yDykvG4pv-QNeCGQnvMoApPUQFKTFkAaK0pdXgw").then(res => {
 			if(res.code === 200){
 				console.log(res)
 				let result = res.data;
@@ -117,8 +117,8 @@ export default {
 			overflow: auto;
 			-webkit-overflow-scrolling: touch;
 			.pagetion{
-				margin: 10px 0;
-				margin-right: 0;
+				margin: 10px auto;
+				
 			}
 
 			.ul-list{
