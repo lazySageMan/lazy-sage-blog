@@ -23,7 +23,6 @@ export default {
     },
 
     created(){
-        this.$store.commit('changeIndex', true);
 	},
 	methods: {
 		toTag(){

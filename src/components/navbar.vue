@@ -12,7 +12,10 @@
                         active-class="router-active" 
                         tag="li"  
                         to="/tags">TAGS</router-link>
-                    <li>ABOUT</li>
+                    <router-link 
+                        active-class="router-active" 
+                        tag="li"  
+                        to="/about">ABOUT</router-link>
                     <li>LOGIN</li>
                 </ul>
             </nav>

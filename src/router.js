@@ -26,10 +26,14 @@ export default new Router({
             component: loadView('blog-content')
         },
         {
-      
             path: '/tags',
             name: 'tags',
             component: loadView('tag')
+        },
+        {
+            path: '/about',
+            name: 'about',
+            component: loadView('about')
         }
     ]
 });

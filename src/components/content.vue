@@ -1,10 +1,17 @@
 <template>
-    <div class="article-detail" v-html="html"></div>
+    <div :style="`max-height: ${maxHeight}px`" class="article-detail" v-html="html" />
 </template>
 
 <script>
 export default {
-    props: ['html']
+    props: {
+        html: {
+            type: String
+        },
+        maxHeight: {
+            default: ''
+        }
+    }
 }
 </script>
 
@@ -14,7 +21,7 @@ export default {
     font-family: 'Lato', 'PingFang SC', 'Microsoft YaHei', sans-serif;
     color: #555;
     line-height: 2;
-    max-height: 300px;
+    // max-height: 300px;
     overflow: hidden;
     img {
         max-width: 100%;

@@ -2,7 +2,7 @@
 	<div class="wrap">
 		<ul class="ul-list">
 			<router-link 
-				to="/content" 
+				:to="`/content?id=${item.id}`" 
 				tag="li" 
 				class="boglist"
 				:class="index < listData.length - 1 ? 'list': ''"
@@ -13,7 +13,7 @@
 					</span>
 					<span class="create-time">{{item.createdAt.slice(0, 10)}}</span>
 				</a-divider>
-				<HtmlContent :html="item.description" />
+				<HtmlContent :maxHeight='300' :html="item.description" />
 				<div class="tag">
 					<Tags type="message" :list="[{name: 100}]" :isShow="false" />
 					<Tags type="read" :list="[{name: 100}]" />
@@ -64,7 +64,7 @@ export default {
             offset: 1,
             pageSize: 10
         }
-		HTTP.GET('/admin/getBlog', obj,  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYWRtaW4iLCJpYXQiOjE1NzA3NTU3NTAsImV4cCI6MTU3MDc5ODk1MH0.dU_4yDykvG4pv-QNeCGQnvMoApPUQFKTFkAaK0pdXgw").then(res => {
+		HTTP.GET('/admin/getBlog', obj,  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYWRtaW4iLCJpYXQiOjE1NzEwMTc1NTIsImV4cCI6MTU3MTA2MDc1Mn0.9eOmWwm3Mf0MoqFQku9eKNBNwiscVJBZACqKYIXHLsI").then(res => {
 			if(res.code === 200){
 				console.log(res)
 				let result = res.data;

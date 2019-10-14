@@ -8,7 +8,7 @@
             </h5>
             <div class="dec">
                 <div class="item">
-                    <img class="iconimg" src="https://cdn.icon-icons.com/icons2/510/PNG/512/social-github_icon-icons.com_50019.png" alt="github">
+                    <img class="iconimg" src="https://cdn.icon-icons.com/icons2/510/PNG/512/social-github_icon-icons.com_50019.png">
                     github
                 </div>
 
