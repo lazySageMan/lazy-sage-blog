@@ -29,10 +29,7 @@
 
 <style scoped>
   pre{
-  }
-  @media (max-width:500px){
-    pre{
-    }
+    overflow: hidden;
   }
   .code {
     display: none;

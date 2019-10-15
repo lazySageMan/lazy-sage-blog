@@ -16,7 +16,22 @@
                         active-class="router-active" 
                         tag="li"  
                         to="/about">ABOUT</router-link>
-                    <li>LOGIN</li>
+                    <li @click="showModal">LOGIN</li>
+                    <a-modal
+                        title="登录"
+                        :visible="visible"
+                        @ok="handleOk"
+                        @cancel="handleCancel"
+                        cancelText="取消"
+                        okText="登录">
+                        <div >
+                            账号：<a-input placeholder="account" />
+                        </div>
+                        <div style="margin-top: 15px" >
+                            密码：<a-input-password placeholder="input password" />
+                        </div>
+                        
+                    </a-modal>
                 </ul>
             </nav>
         </header>
@@ -29,7 +44,8 @@ export default {
         return{
             active: 'transparent',
             up: false,
-            scroll: 0
+            scroll: 0,
+            visible: false
         };
     },
 
@@ -70,11 +86,21 @@ export default {
                 }else{
                     this.active = 'hide';
                 }
-
-               
             }else{
                 this.active = 'transparent';
             }
+        },
+
+        showModal(){
+            this.visible = true;
+        },
+
+        handleOk() {
+            this.visible = false;
+        },
+
+        handleCancel() {
+            this.visible = false;
         },
     }
 };
@@ -90,7 +116,6 @@ export default {
     .router-active {
         color: rgb(45, 183, 245);
     }
-    
     .header{
         height: 60px;
         display: flex;
@@ -127,7 +152,11 @@ export default {
                     text-align: center;
                     transition: .5s;
                     cursor: pointer;
+                    & :hover{
+                        color: rgb(45, 183, 245);
+                    }
                 }
+                
             }
         }
     }

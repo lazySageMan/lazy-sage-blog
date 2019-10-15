@@ -134,6 +134,7 @@ export default {
 			-webkit-overflow-scrolling: touch;
 			height: calc(100vh - 64px - 40px);
 			position: relative;
+			padding-left: 10px;
 			.content{
 
 				width: calc(100% - 280px);

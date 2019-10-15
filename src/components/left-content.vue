@@ -8,13 +8,13 @@
             </h5>
             <div class="dec">
                 <div class="item">
-                    <img class="iconimg" src="https://cdn.icon-icons.com/icons2/510/PNG/512/social-github_icon-icons.com_50019.png">
+                    <img class="iconimg" src="../assets/github.png">
                     github
                 </div>
 
                 <div class="item">
-                    <img class="iconimg" src="https://cdn.icon-icons.com/icons2/510/PNG/512/social-github_icon-icons.com_50019.png">
-                    gitee
+                    <img class="iconimg" src="../assets/juejin.png">
+                    juejin
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@ export default {
 
 <style lang="scss" scoped>
 .left-wrap{
-    width: 90%;
+    width: 100%;
     height: calc(100vh - 64px - 40px);
     overflow-y: auto;
     border-right: 1px solid #ebedf0;
@@ -90,7 +90,7 @@ export default {
             display: flex;
             justify-content: flex-start;
             flex-wrap: wrap;
-            padding: 0 5px;
+            padding: 0 10px;
         }
     }
     .center{
@@ -142,7 +142,7 @@ export default {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 70px;
+            padding: 0 90px;
             & :hover{
                 background:#ebedf0;
             }

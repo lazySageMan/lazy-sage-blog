@@ -29,21 +29,19 @@
 
 <style scoped>
 
-    @media (max-width:500px){
-        .resumeEditor{
-            
+    .resumeEditor{
+        overflow: auto;     
+    }
+    .htmlMode {
+        animation: flip 2s;
+    }
+
+    @keyframes flip {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
         }
     }
-  .htmlMode {
-    animation: flip 2s;
-  }
-
-  @keyframes flip {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 </style>

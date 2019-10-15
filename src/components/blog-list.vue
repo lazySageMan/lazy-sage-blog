@@ -64,7 +64,7 @@ export default {
             offset: 1,
             pageSize: 10
         }
-		HTTP.GET('/admin/getBlog', obj,  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYWRtaW4iLCJpYXQiOjE1NzEwMTc1NTIsImV4cCI6MTU3MTA2MDc1Mn0.9eOmWwm3Mf0MoqFQku9eKNBNwiscVJBZACqKYIXHLsI").then(res => {
+		HTTP.GET('/admin/getBlog', obj,  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoiYWRtaW4iLCJpYXQiOjE1NzExMDUyNTAsImV4cCI6MTU3MTE0ODQ1MH0.dMKTCIY6AB044f6rDlNcmggUh2oheseZtyOgpeZqCKQ").then(res => {
 			if(res.code === 200){
 				console.log(res)
 				let result = res.data;
@@ -116,6 +116,7 @@ export default {
 			height: calc(100vh - 64px - 40px);
 			overflow: auto;
 			-webkit-overflow-scrolling: touch;
+			padding-left: 10px;
 			.pagetion{
 				margin: 10px auto;
 				
